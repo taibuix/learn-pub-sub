@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Client",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/client/index.ts",
+            "runtimeArgs": [
+                "--loader",
+                "ts-node/esm",
+                "--enable-source-maps"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "Run Server",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/server/index.ts",
+            "runtimeArgs": [
+                "--loader",
+                "ts-node/esm"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}
